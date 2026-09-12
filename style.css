@@ -239,7 +239,7 @@ body{
 .ganesha-image{
   display:block;
 
-  width:min(24vw,105px);
+  width:min(24vw,80px);
   height:auto;
 
   object-fit:contain;
