@@ -49,18 +49,7 @@ body{
   align-items:center;
   justify-content:center;
 
-  background:
-    radial-gradient(
-      circle at 20% 10%,
-      rgba(244,181,170,.13),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(222,187,107,.10),
-      transparent 28%
-    ),
-    #f8edda;
+  background:#f8edda;
 }
 
 
@@ -110,23 +99,7 @@ body{
 
   text-align:center;
 
-  background:
-    radial-gradient(
-      ellipse at 50% 35%,
-      rgba(255,255,255,.65),
-      transparent 48%
-    ),
-    radial-gradient(
-      ellipse at 12% 50%,
-      rgba(240,165,150,.15),
-      transparent 30%
-    ),
-    radial-gradient(
-      ellipse at 88% 50%,
-      rgba(240,165,150,.15),
-      transparent 30%
-    ),
-    #faf0dc;
+  background:#f8edda;
 }
 
 
@@ -150,7 +123,7 @@ body{
 .hero-decor-left{
   position:absolute;
 
-  top:35px;
+  top:55px;
   left:-35px;
 
   width:min(31vw,430px);
@@ -173,7 +146,7 @@ body{
 .hero-decor-right{
   position:absolute;
 
-  top:35px;
+  top:55px;
   right:-35px;
 
   width:min(31vw,430px);
@@ -1394,16 +1367,13 @@ body{
 
 @media(max-width:699px){
 
-  html{
-    scroll-snap-type:y mandatory;
-  }
+  /*html{scroll-snap-type:y mandatory;}*/
 
   .section{
     height:100svh;
     min-height:100svh;
 
-    scroll-snap-align:start;
-    scroll-snap-stop:always;
+    scroll-snap-stop:always;*/
   }
 
 }
@@ -1433,10 +1403,47 @@ body{
    ========================================================= */
 
 @media(max-width:699px){
+   #sita-rama-image{
+    transform:translateX(-3%);
+  }
 
+  .section,
+  .hero,
+  .bride,
+  .groom,
+  .events-overview,
+  .event-detail,
+  .countdown-section,
+  .footer-section,
+  .sneak-peek{
+    background:#fbf1df;
+  }
   .section{
     height:100svh;
     min-height:100svh;
+    max-height:100svh;
+    box-sizing:border-box;
+  }
+  .person-section{
+    justify-content:flex-start;
+    padding-top:28px;
+  }
+
+  .person-section .section-heading{
+    width:100%;
+    flex-shrink:0;
+  }
+
+  .portrait-wrap{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .portrait-ring{
+    margin-left:auto;
+    margin-right:auto;
   }
 
 }
