@@ -993,9 +993,9 @@ body{
   display:grid;
 
   grid-template-columns:
-    repeat(2,1fr);
+    repeat(4,1fr);
 
-  gap:12px;
+  gap:8px;
 
   width:100%;
 
