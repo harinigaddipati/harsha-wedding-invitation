@@ -3,7 +3,6 @@ const weddingData = {
   musicFile: "Sita Kalyanam Male.mp3"
 };
 
-
 // ==============================
 // COUNTDOWN
 // ==============================
