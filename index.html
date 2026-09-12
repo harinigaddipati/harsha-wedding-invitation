@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7edda">
+  <title>Gaddipati Vari Vivaha Ahwanam</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- KOLAM VIDEO TRANSITION -->
+  <div id="kolamTransition" aria-hidden="true">
+    <video id="kolamVideo" playsinline preload="auto">
+      <source src="photos/kolam.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- MUSIC -->
+  <header class="topbar">
+    <button
+      class="music-toggle"
+      id="musicToggle"
+      type="button"
+      aria-label="Toggle music"
+    >♪</button>
+  </header>
+
+
+  <main>
+
+    <!-- =====================================================
+         1. OPENING
+         ===================================================== -->
+
+    <section class="section hero" id="opening">
+
+      <!-- REAL IMAGE DECORATIONS -->
+      <div class="hero-decor" aria-hidden="true">
+
+        <!-- Left banana leaves -->
+        <img
+          class="hero-decor-left"
+          src="photos/banana-left.png"
+          alt=""
+        >
+
+        <!-- Right banana leaves -->
+        <img
+          class="hero-decor-right"
+          src="photos/banana-right.png"
+          alt=""
+        >
+
+        <!-- Top flower garland -->
+        <img
+          class="hero-garland"
+          src="photos/garland-top.png"
+          alt=""
+        >
+
+      </div>
+
+
+      <!-- GANESHA -->
+      <div class="ganesha-wrap">
+        <img
+          class="ganesha-image"
+          src="photos/ganesha-image.png"
+          alt="Lord Ganesha"
+        >
+
+        <div
+          class="tiny-telugu"
+          data-edit="ganeshaBlessing"
+        >|| శ్రీ గణేశాయ నమః ||</div>
+      </div>
+
+
+      <!-- TITLE -->
+      <div class="hero-title">
+
+        <div
+          class="title-small telugu"
+          data-edit="familyTitle"
+        >గడ్డిపాటి వారి</div>
+
+        <div
+          class="title-large telugu"
+          data-edit="inviteTitle"
+        >వివాహ ఆహ్వానం</div>
+
+        <div class="gold-divider">
+          <span>✿</span>
+        </div>
+
+      </div>
+
+
+      <!-- SUBTITLE -->
+      <div
+        class="hero-subtitle telugu"
+        data-edit="heroMessage"
+      >మా కుటుంబం ఆత్మీయ ఆహ్వానం</div>
+
+
+      <!-- SITA RAMA -->
+      <div class="sita-frame">
+        <img
+          id="sita-rama-image"
+          src="photos/sita-rama-image.png"
+          alt="Sita Rama illustration"
+        >
+      </div>
+
+
+      <!-- OPEN BUTTON -->
+      <button
+        class="open-button"
+        id="openInvitation"
+        type="button"
+      >
+        <span data-edit="openButton">OPEN INVITATION</span>
+        <span>↓</span>
+      </button>
+
+
+      <div
+        class="hero-foot"
+        data-edit="heroFoot"
+      >WITH BLESSINGS</div>
+
+    </section>
+
+
+    <!-- =====================================================
+         2. BRIDE
+         ===================================================== -->
+
+    <section
+      class="section person-section bride"
+      id="bride"
+    >
+
+      <div class="corner-art top-right"></div>
+
+      <div class="section-heading">
+
+        <span data-edit="brideKicker">
+          MEET THE
+        </span>
+
+        <h2 data-edit="brideHeading">
+          BRIDE
+        </h2>
+
+        <div class="gold-line">
+          ✦
+        </div>
+
+        <p data-edit="brideTagline">
+          ఇంటి పెద్ద కూతురు
+        </p>
+
+      </div>
+
+
+      <div class="portrait-wrap">
+
+        <div class="portrait-ring">
+          <img
+            id="bridePhoto"
+            src="photos/bridePhoto.jpg"
+            alt="Bride photo"
+          >
+        </div>
+
+        <div class="person-info">
+
+          <h3 data-edit="brideName">
+            Harsha
+          </h3>
+
+          <div
+            class="role"
+            data-edit="brideRelation"
+          >
+            DAUGHTER OF
+          </div>
+
+          <p data-edit="brideParents">
+            Dasaradha Raghava Rao &amp; Aruna
+          </p>
+
+          <div class="mini-lotus">
+            ✿
+          </div>
+
+          <p
+            class="bio"
+            data-edit="brideIntro"
+          >
+            [ A short introduction about the bride will go here. ]
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         3. GROOM
+         ===================================================== -->
+
+    <section
+      class="section person-section groom"
+      id="groom"
+    >
+
+      <div class="corner-art top-left"></div>
+
+      <div class="section-heading">
+
+        <span data-edit="groomKicker">
+          MEET THE
+        </span>
+
+        <h2 data-edit="groomHeading">
+          GROOM
+        </h2>
+
+        <div class="gold-line">
+          ✦
+        </div>
+
+        <p data-edit="groomTagline">
+          ఇంటి చిన్న కొడుకు
+        </p>
+
+      </div>
+
+
+      <div class="portrait-wrap">
+
+        <div class="portrait-ring">
+          <img
+            id="groomPhoto"
+            src="photos/groomPhoto.png"
+            alt="Groom photo"
+          >
+        </div>
+
+        <div class="person-info">
+
+          <h3 data-edit="groomName">
+            Venkatesh
+          </h3>
+
+          <div
+            class="role"
+            data-edit="groomRelation"
+          >
+            SON OF
+          </div>
+
+          <p data-edit="groomParents">
+            [ Father's Name ] &amp; [ Mother's Name ]
+          </p>
+
+          <div class="mini-lotus">
+            ✿
+          </div>
+
+          <p
+            class="bio"
+            data-edit="groomIntro"
+          >
+            [ A short introduction about the groom will go here. ]
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         4. EVENTS OVERVIEW
+         ===================================================== -->
+
+    <section
+      class="section events-overview"
+      id="events"
+    >
+
+      <div class="event-overview-top">
+
+        <span data-edit="eventsKicker">
+          OUR
+        </span>
+
+        <h2 data-edit="eventsTitle">
+          Celebrations
+        </h2>
+
+        <div class="gold-line">
+          ✦
+        </div>
+
+        <p data-edit="eventsIntro">
+          Let the madness begin
+        </p>
+
+      </div>
+
+
+      <div class="event-list">
+
+        <a
+          class="event-card"
+          href="#pellikuthuru"
+        >
+          <div class="event-art">
+            <img
+              src="photos/PelliKuthuruImage.jpg"
+              alt="Pelli Kuthuru"
+            >
+          </div>
+
+          <div>
+            <h3 data-edit="pellikuthuruTitle">
+              Pelli Kuthuru
+            </h3>
+          </div>
+
+          <span>›</span>
+        </a>
+
+
+        <a
+          class="event-card"
+          href="#haldi"
+        >
+          <div class="event-art">
+            <img
+              src="photos/HaldiImage.png"
+              alt="Haldi"
+            >
+          </div>
+
+          <div>
+            <h3 data-edit="haldiTitle">
+              HALDI
+            </h3>
+          </div>
+
+          <span>›</span>
+        </a>
+
+
+        <a
+          class="event-card"
+          href="#sangeeth"
+        >
+          <div class="event-art">
+            <img
+              src="photos/SangeethImage.png"
+              alt="Sangeeth"
+            >
+          </div>
+
+          <div>
+            <h3 data-edit="sangeethTitle">
+              SANGEETH
+            </h3>
+          </div>
+
+          <span>›</span>
+        </a>
+
+
+        <a
+          class="event-card"
+          href="#wedding"
+        >
+          <div class="event-art">
+            <img
+              src="photos/WeddingImage.png"
+              alt="Wedding"
+            >
+          </div>
+
+          <div>
+            <h3 data-edit="weddingTitle">
+              WEDDING
+            </h3>
+          </div>
+
+          <span>›</span>
+        </a>
+
+      </div>
+
+
+      <div
+        class="section-message"
+        data-edit="eventsQuote"
+      >
+        “Different days, the same beautiful journey.”
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         5. PELLI KUTHURU
+         ===================================================== -->
+
+    <section
+      class="section event-detail pellikuthuru-detail"
+      id="pellikuthuru"
+    >
+
+      <div class="detail-art pellikuthuru-art">
+        <img
+          src="photos/PelliKuthuruImage.jpg"
+          alt="Pelli Kuthuru"
+        >
+      </div>
+
+      <h2 data-edit="pellikuthuruTitleBig">
+        Pelli Kuthuru
+      </h2>
+
+      <div class="detail-divider">
+        ✦
+      </div>
+
+      <div class="event-info">
+
+        <div>
+          <b>DATE</b>
+          <span data-edit="pellikuthuruDate">
+            [ DD MMM YYYY ]
+          </span>
+        </div>
+
+        <div>
+          <b>TIME</b>
+          <span data-edit="pellikuthuruTime">
+            [ HH:MM AM/PM ]
+          </span>
+        </div>
+
+        <div>
+          <b>VENUE</b>
+
+          <span data-edit="weddingVenue">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Gaddipati+Hanumaiah+Plaza%2C+Arundelpet%2C+Guntur%2C+Andhra+Pradesh+522002"
+              target="_blank"
+              rel="noopener"
+            >
+              Gaddipati Hanumaiah Plaza
+            </a>
+
+            <br>
+
+            Guntur, Andhra Pradesh
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         6. HALDI
+         ===================================================== -->
+
+    <section
+      class="section event-detail haldi-detail"
+      id="haldi"
+    >
+
+      <div class="detail-art haldi-art">
+        <img
+          src="photos/HaldiImage.png"
+          alt="Haldi"
+        >
+      </div>
+
+      <h2 data-edit="haldiTitleBig">
+        HALDI
+      </h2>
+
+      <div class="detail-divider">
+        ✦
+      </div>
+
+      <div class="event-info">
+
+        <div>
+          <b>DATE</b>
+          <span data-edit="haldiDate">
+            [ DD MMM YYYY ]
+          </span>
+        </div>
+
+        <div>
+          <b>TIME</b>
+          <span data-edit="haldiTime">
+            [ HH:MM AM/PM ]
+          </span>
+        </div>
+
+        <div>
+          <b>VENUE</b>
+
+          <span data-edit="weddingVenue">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Gaddipati+Hanumaiah+Plaza%2C+Arundelpet%2C+Guntur%2C+Andhra+Pradesh+522002"
+              target="_blank"
+              rel="noopener"
+            >
+              Gaddipati Hanumaiah Plaza
+            </a>
+
+            <br>
+
+            Guntur, Andhra Pradesh
+          </span>
+        </div>
+
+        <div>
+          <b>DRESS CODE</b>
+          <span data-edit="haldiDress">
+            [ Yellow / Traditional ]
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         7. SANGEETH
+         ===================================================== -->
+
+    <section
+      class="section event-detail sangeeth-detail"
+      id="sangeeth"
+    >
+
+      <div class="detail-art sangeeth-art">
+        <img
+          src="photos/SangeethImage.png"
+          alt="Sangeeth"
+        >
+      </div>
+
+      <h2 data-edit="sangeethTitleBig">
+        SANGEETH
+      </h2>
+
+      <div class="detail-divider">
+        ✦
+      </div>
+
+      <div class="event-info">
+
+        <div>
+          <b>DATE</b>
+          <span data-edit="sangeethDate">
+            [ DD MMM YYYY ]
+          </span>
+        </div>
+
+        <div>
+          <b>TIME</b>
+          <span data-edit="sangeethTime">
+            [ HH:MM AM/PM ]
+          </span>
+        </div>
+
+        <div>
+          <b>VENUE</b>
+
+          <span data-edit="weddingVenue">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Gaddipati+Hanumaiah+Plaza%2C+Arundelpet%2C+Guntur%2C+Andhra+Pradesh+522002"
+              target="_blank"
+              rel="noopener"
+            >
+              Gaddipati Hanumaiah Plaza
+            </a>
+
+            <br>
+
+            Guntur, Andhra Pradesh
+          </span>
+        </div>
+
+        <div>
+          <b>DRESS CODE</b>
+          <span data-edit="sangeethDress">
+            [ Festive / Indo-western ]
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         8. WEDDING
+         ===================================================== -->
+
+    <section
+      class="section event-detail wedding-detail"
+      id="wedding"
+    >
+
+      <div class="detail-art wedding-art">
+        <img
+          src="photos/WeddingImage.png"
+          alt="Wedding"
+        >
+      </div>
+
+      <h2 data-edit="weddingTitleBig">
+        WEDDING
+      </h2>
+
+      <div class="detail-divider">
+        ✦
+      </div>
+
+      <div class="event-info">
+
+        <div>
+          <b>DATE</b>
+          <span data-edit="weddingDate">
+            [ DD MMM YYYY ]
+          </span>
+        </div>
+
+        <div>
+          <b>TIME</b>
+          <span data-edit="weddingTime">
+            [ HH:MM AM/PM ]
+          </span>
+        </div>
+
+        <div>
+          <b>VENUE</b>
+
+          <span data-edit="weddingVenue">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Vijayam+Convention%2C+8C9P%2B4P8%2C+Venugopalnagar%2C+Gauthami+Nagar%2C+Guntur%2C+Andhra+Pradesh+522007"
+              target="_blank"
+              rel="noopener"
+            >
+              Vijayam Convention
+            </a>
+
+            <br>
+
+            Guntur, Andhra Pradesh
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         9. COUNTDOWN
+         ===================================================== -->
+
+    <section
+      class="section countdown"
+      id="countdown"
+    >
+
+      <div class="soft-motif">
+        ✿
+      </div>
+
+      <span data-edit="countdownKicker">
+        THE WAIT IS ALMOST OVER
+      </span>
+
+      <h2 data-edit="countdownTitle">
+        Counting Down Till We Say Forever
+      </h2>
+
+      <div class="gold-line">
+        ✦
+      </div>
+
+      <div class="count-grid">
+
+        <div>
+          <strong id="days">00</strong>
+          <span>DAYS</span>
+        </div>
+
+        <div>
+          <strong id="hours">00</strong>
+          <span>HOURS</span>
+        </div>
+
+        <div>
+          <strong id="minutes">00</strong>
+          <span>MINUTES</span>
+        </div>
+
+        <div>
+          <strong id="seconds">00</strong>
+          <span>SECONDS</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         10. FAMILY FOOTER
+         ===================================================== -->
+
+    <section
+      class="section family-footer"
+      id="family"
+    >
+
+      <div class="footer-arch">
+
+        <div class="soft-temple">
+          ⌂
+        </div>
+
+        <h2
+          class="telugu"
+          data-edit="familyHeading"
+        >
+          ఆహ్వానిస్తున్నవారు
+        </h2>
+
+        <div class="gold-line">
+          ✦
+        </div>
+
+        <p
+          class="telugu"
+          data-edit="familyIntro"
+        >
+          మా కుమార్తె వివాహ మహోత్సవానికి<br>
+          మీ ఆగమనాభిలాషలతో...
+        </p>
+
+        <div class="parent-plaque">
+
+          <div
+            class="telugu small-label"
+            data-edit="parentLabel"
+          >
+            వధువు తల్లిదండ్రులు
+          </div>
+
+          <h3
+            class="telugu"
+            data-edit="parentFather"
+          >
+            శ్రీ [దశరథ రాఘవరావు]
+          </h3>
+
+          <h3
+            class="telugu"
+            data-edit="parentMother"
+          >
+            శ్రీమతి [అరుణ]
+          </h3>
+
+        </div>
+
+        <p
+          class="telugu closing"
+          data-edit="familyClosing"
+        >
+          మీ రాక మా కుటుంబానికి<br>
+          ఎల్లప్పుడూ మరపురాని ఆనందం...
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         11. SNEAK PEEK
+         ===================================================== -->
+
+    <section
+      class="section sneak-peek"
+      id="sneakpeek"
+    >
+
+      <span data-edit="peekKicker">
+        A LITTLE
+      </span>
+
+      <h2 data-edit="peekTitle">
+        Sneak Peek
+      </h2>
+
+      <div class="gold-line">
+        ✦
+      </div>
+
+      <p data-edit="peekMessage">
+        [ A glimpse of the moments we cherish ]
+      </p>
+
+      <div class="peek-grid">
+
+        <label class="peek-photo">
+          <input
+            type="file"
+            accept="image/*"
+            data-photo-input="peek1"
+          >
+          <img
+            id="peek1"
+            src="photos/photo-placeholder.svg"
+            alt="Photo placeholder"
+          >
+        </label>
+
+        <label class="peek-photo tall">
+          <input
+            type="file"
+            accept="image/*"
+            data-photo-input="peek2"
+          >
+          <img
+            id="peek2"
+            src="photos/photo-placeholder.svg"
+            alt="Photo placeholder"
+          >
+        </label>
+
+        <label class="peek-photo">
+          <input
+            type="file"
+            accept="image/*"
+            data-photo-input="peek3"
+          >
+          <img
+            id="peek3"
+            src="photos/photo-placeholder.svg"
+            alt="Photo placeholder"
+          >
+        </label>
+
+        <label class="peek-photo">
+          <input
+            type="file"
+            accept="image/*"
+            data-photo-input="peek4"
+          >
+          <img
+            id="peek4"
+            src="photos/photo-placeholder.svg"
+            alt="Photo placeholder"
+          >
+        </label>
+
+      </div>
+
+      <div
+        class="final-blessing telugu"
+        data-edit="finalBlessing"
+      >
+        మీ అందరి ఆశీస్సులతో...
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <audio
+    id="bgMusic"
+    loop
+    preload="none"
+  ></audio>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

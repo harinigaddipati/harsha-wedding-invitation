@@ -1,0 +1,1442 @@
+/* =========================================================
+   GADDIPATI VARI WEDDING INVITATION
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#f8edda;
+  color:#69452e;
+  font-family:"Playfair Display",serif;
+}
+
+.telugu{
+  font-family:"Noto Serif Telugu","Nirmala UI",serif;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+   ========================================================= */
+
+.section{
+  position:relative;
+
+  height:100svh;
+  min-height:100svh;
+
+  width:100%;
+  overflow:hidden;
+
+  padding:
+    clamp(28px,7vw,72px)
+    clamp(20px,6vw,72px);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(244,181,170,.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(222,187,107,.10),
+      transparent 28%
+    ),
+    #f8edda;
+}
+
+
+/* =========================================================
+   MUSIC BUTTON
+   ========================================================= */
+
+.topbar{
+  position:fixed;
+  z-index:100;
+  top:12px;
+  right:12px;
+
+  display:flex;
+  gap:8px;
+}
+
+.topbar button{
+  border:1px solid #c59b4d;
+  background:rgba(247,237,218,.92);
+  color:#7e182c;
+  border-radius:999px;
+  padding:8px 12px;
+
+  font:600 12px "Playfair Display";
+
+  backdrop-filter:blur(8px);
+  cursor:pointer;
+}
+
+.music-toggle{
+  width:38px;
+}
+
+
+/* =========================================================
+   OPENING
+   ========================================================= */
+
+.hero{
+  position:relative;
+  isolation:isolate;
+  min-height:100svh;
+
+  padding-top:58px;
+  padding-bottom:32px;
+
+  text-align:center;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 35%,
+      rgba(255,255,255,.65),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 12% 50%,
+      rgba(240,165,150,.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 88% 50%,
+      rgba(240,165,150,.15),
+      transparent 30%
+    ),
+    #faf0dc;
+}
+
+
+/* =========================================================
+   REAL IMAGE DECORATION LAYER
+   ========================================================= */
+
+.hero-decor{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+
+/* =========================================================
+   LEFT BANANA LEAVES
+   ========================================================= */
+
+.hero-decor-left{
+  position:absolute;
+
+  top:-5px;
+  left:-35px;
+
+  width:min(31vw,430px);
+  height:auto;
+
+  display:block;
+  object-fit:contain;
+
+  pointer-events:none;
+  user-select:none;
+
+  z-index:1;
+}
+
+
+/* =========================================================
+   RIGHT BANANA LEAVES
+   ========================================================= */
+
+.hero-decor-right{
+  position:absolute;
+
+  top:-5px;
+  right:-35px;
+
+  width:min(31vw,430px);
+  height:auto;
+
+  display:block;
+  object-fit:contain;
+
+  pointer-events:none;
+  user-select:none;
+
+  z-index:1;
+}
+
+
+/* =========================================================
+   TOP FLOWER GARLAND
+   ========================================================= */
+
+.hero-garland{
+  position:absolute;
+  top:-390px;
+  left:50%;
+  transform:translateX(-50%);
+
+  width:min(45vw,500px);
+  height:auto;
+
+  display:block;
+  object-fit:contain;
+
+  pointer-events:none;
+  user-select:none;
+
+  z-index:2;
+}
+
+
+/* =========================================================
+   OLD DECORATION ELEMENT
+   ========================================================= */
+
+.hero .motif-hanging{
+  display:none;
+}
+
+
+/* =========================================================
+   GANESHA
+   ========================================================= */
+
+.ganesha-wrap{
+  position:relative;
+  z-index:3;
+
+  margin-top:2px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.ganesha-image{
+  display:block;
+
+  width:min(24vw,105px);
+  height:auto;
+
+  object-fit:contain;
+
+  filter:
+    drop-shadow(
+      0 5px 6px rgba(80,45,20,.12)
+    );
+}
+
+.tiny-telugu{
+  margin-top:5px;
+
+  color:#9b6926;
+
+  font:15px "Noto Serif Telugu";
+
+  letter-spacing:.03em;
+}
+
+
+/* =========================================================
+   OPENING TITLE
+   ========================================================= */
+
+.hero-title{
+  position:relative;
+  z-index:3;
+
+  margin-top:16px;
+
+  text-align:center;
+}
+
+.title-small{
+  font-size:clamp(34px,9vw,56px);
+
+  font-weight:600;
+
+  color:#8d1933;
+
+  line-height:1.05;
+
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.75);
+}
+
+.title-large{
+  font-size:clamp(42px,11vw,72px);
+
+  font-weight:600;
+
+  color:#a66d1b;
+
+  margin-top:4px;
+
+  line-height:1.05;
+
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.8);
+}
+
+
+/* =========================================================
+   DIVIDERS
+   ========================================================= */
+
+.gold-divider,
+.gold-line,
+.detail-divider{
+  color:#b9872b;
+
+  margin:12px auto;
+
+  font-size:18px;
+
+  display:flex;
+
+  gap:14px;
+
+  align-items:center;
+  justify-content:center;
+}
+
+.gold-divider::before,
+.gold-divider::after,
+.gold-line::before,
+.gold-line::after,
+.detail-divider::before,
+.detail-divider::after{
+  content:"";
+
+  width:65px;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #c7a35b,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   HERO SUBTITLE
+   ========================================================= */
+
+.hero-subtitle{
+  position:relative;
+  z-index:3;
+
+  font-size:18px;
+
+  color:#805b3a;
+
+  margin:5px 0 14px;
+}
+
+
+/* =========================================================
+   SITA-RAMA
+   ========================================================= */
+
+.sita-frame{
+  position:relative;
+  z-index:3;
+
+  width:min(92vw,600px);
+
+  margin:4px auto 8px;
+
+  min-height:320px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+}
+
+.sita-frame::before{
+  content:"";
+
+  position:absolute;
+
+  inset:8% 4%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(239,172,154,.20),
+      transparent 68%
+    );
+
+  z-index:-1;
+}
+
+.sita-frame img{
+  display:block;
+
+  width:100%;
+
+  max-height:57svh;
+
+  object-fit:contain;
+
+  filter:
+    drop-shadow(
+      0 9px 8px rgba(80,45,20,.10)
+    );
+}
+
+
+/* =========================================================
+   OPEN INVITATION BUTTON
+   ========================================================= */
+
+.open-button{
+  position:relative;
+  z-index:4;
+
+  border:2px solid #c89636;
+
+  background:
+    linear-gradient(
+      180deg,
+      #a72343 0%,
+      #87152f 100%
+    );
+
+  color:#fff7e8;
+
+  border-radius:999px;
+
+  box-shadow:
+    0 4px 0 #681327,
+    0 9px 20px rgba(100,30,20,.16);
+
+  padding:15px 30px;
+
+  min-width:min(76vw,390px);
+
+  font:
+    600 15px "Playfair Display";
+
+  letter-spacing:.12em;
+
+  display:flex;
+
+  gap:18px;
+
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease;
+}
+
+.open-button::before,
+.open-button::after{
+  content:"✦";
+
+  position:absolute;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  color:#dfb454;
+
+  font-size:18px;
+}
+
+.open-button::before{
+  left:14px;
+}
+
+.open-button::after{
+  right:14px;
+}
+
+.open-button:active{
+  transform:translateY(3px);
+
+  box-shadow:
+    0 1px 0 #681327,
+    0 5px 12px rgba(100,30,20,.15);
+}
+
+.open-button span:last-child{
+  font-family:Arial,sans-serif;
+
+  font-size:16px;
+
+  font-weight:normal;
+
+  line-height:1;
+
+  display:inline-block;
+}
+
+
+/* =========================================================
+   HERO FOOT
+   ========================================================= */
+
+.hero-foot{
+  position:relative;
+  z-index:3;
+
+  font-size:11px;
+
+  letter-spacing:.25em;
+
+  color:#9b7b4c;
+
+  margin-top:18px;
+}
+
+
+/* =========================================================
+   BRIDE / GROOM
+   ========================================================= */
+
+.person-section{
+  justify-content:flex-start;
+
+  padding-top:70px;
+
+  text-align:center;
+}
+
+.section-heading span{
+  font-size:13px;
+
+  letter-spacing:.28em;
+
+  color:#a97828;
+}
+
+.section-heading h2{
+  font-size:clamp(38px,11vw,58px);
+
+  color:#861d32;
+
+  margin:6px 0;
+
+  font-weight:500;
+}
+
+.section-heading p{
+  font-size:12px;
+
+  letter-spacing:.18em;
+
+  color:#906f49;
+}
+
+
+/* =========================================================
+   PORTRAITS
+   ========================================================= */
+
+.portrait-wrap{
+  margin:18px auto 14px;
+
+  position:relative;
+}
+
+.portrait-ring{
+  width:min(72vw,310px);
+
+  height:min(72vw,310px);
+
+  border-radius:50%;
+
+  padding:9px;
+
+  background:#e7d2b4;
+
+  border:2px solid #bd8d35;
+
+  box-shadow:
+    0 5px 18px rgba(70,35,20,.12);
+}
+
+.portrait-ring img{
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+  background:#ead8bd;
+}
+
+
+/* =========================================================
+   PERSON INFORMATION
+   ========================================================= */
+
+.person-info h3{
+  font-size:28px;
+
+  color:#861d32;
+
+  margin:8px 0;
+}
+
+.role{
+  font-size:11px;
+
+  letter-spacing:.25em;
+
+  color:#a97828;
+}
+
+.person-info p{
+  margin:7px auto;
+
+  max-width:330px;
+}
+
+.bio{
+  font-size:15px;
+
+  line-height:1.6;
+}
+
+.mini-lotus{
+  color:#d66d72;
+
+  font-size:22px;
+}
+
+
+/* =========================================================
+   EVENTS OVERVIEW
+   ========================================================= */
+
+.events-overview{
+  text-align:center;
+
+  justify-content:flex-start;
+
+  padding-top:90px;
+}
+
+.event-overview-top span{
+  font-size:13px;
+
+  letter-spacing:.28em;
+
+  color:#a97828;
+}
+
+.event-overview-top h2{
+  font-size:clamp(38px,11vw,58px);
+
+  color:#861d32;
+
+  margin:6px 0;
+
+  font-weight:500;
+}
+
+.event-overview-top p{
+  max-width:300px;
+
+  line-height:1.5;
+}
+
+
+/* =========================================================
+   EVENT LIST
+   ========================================================= */
+
+.event-list{
+  width:100%;
+
+  max-width:520px;
+
+  display:grid;
+
+  gap:14px;
+
+  margin-top:22px;
+}
+
+.event-card{
+  display:grid;
+
+  grid-template-columns:
+    82px
+    1fr
+    32px;
+
+  align-items:center;
+
+  gap:14px;
+
+  text-align:left;
+
+  text-decoration:none;
+
+  color:#69452e;
+
+  border:1px solid #d7b873;
+
+  border-radius:9px;
+
+  padding:10px;
+
+  background:
+    rgba(255,250,238,.68);
+
+  box-shadow:
+    0 5px 15px rgba(100,60,20,.06);
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease;
+}
+
+.event-card:active{
+  transform:scale(.985);
+}
+
+
+/* =========================================================
+   EVENT THUMBNAILS
+   ========================================================= */
+
+.event-art{
+  width:82px;
+
+  height:82px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+  border-radius:10px;
+
+  background:#f4e6cc;
+
+  border:1px solid #d5b36c;
+}
+
+.event-art img{
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  border-radius:9px;
+
+  display:block;
+}
+
+.event-card h3{
+  margin:0;
+
+  color:#861d32;
+
+  font-size:20px;
+}
+
+.event-card>span{
+  font-size:30px;
+
+  color:#b27e27;
+}
+
+
+/* =========================================================
+   EVENTS MESSAGE
+   ========================================================= */
+
+.section-message{
+  margin-top:30px;
+
+  color:#936b3e;
+
+  font-style:italic;
+
+  text-align:center;
+}
+
+
+/* =========================================================
+   INDIVIDUAL EVENT SECTIONS
+   ========================================================= */
+
+.event-detail{
+  justify-content:flex-start;
+
+  padding-top:65px;
+
+  text-align:center;
+}
+
+
+/* =========================================================
+   EVENT ARTWORK
+   ========================================================= */
+
+.detail-art{
+  position:relative;
+
+  width:min(55vw,250px);
+
+  aspect-ratio:1 / 1;
+
+  height:auto;
+
+  border-radius:30px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+  margin:5px 0 18px;
+
+  background:#f5e7cf;
+
+  border:2px solid #c9a158;
+
+  box-shadow:
+    0 8px 22px rgba(80,45,20,.10);
+}
+
+.detail-art::after{
+  content:"";
+
+  position:absolute;
+
+  inset:7px;
+
+  border:
+    1px solid
+    rgba(180,130,45,.45);
+
+  border-radius:22px;
+
+  pointer-events:none;
+}
+
+.detail-art img{
+  width:100%;
+
+  height:100%;
+
+  object-fit:contain;
+
+  border-radius:28px;
+
+  display:block;
+}
+
+
+/* =========================================================
+   EVENT TITLE
+   ========================================================= */
+
+.event-kicker{
+  font-size:11px;
+
+  letter-spacing:.18em;
+
+  color:#a97828;
+}
+
+.event-detail h2{
+  font-size:48px;
+
+  color:#861d32;
+
+  margin:4px 0;
+}
+
+
+/* =========================================================
+   EVENT INFORMATION
+   ========================================================= */
+
+.event-info{
+  width:100%;
+
+  max-width:430px;
+
+  margin-top:10px;
+
+  border-top:1px solid #cba65e;
+
+  border-bottom:1px solid #cba65e;
+
+  border-left:0;
+
+  border-right:0;
+
+  border-radius:0;
+
+  padding:5px 18px;
+
+  background:rgba(255,251,241,.28);
+}
+
+.event-info div{
+  display:grid;
+
+  grid-template-columns:
+    110px
+    1fr;
+
+  gap:12px;
+
+  text-align:left;
+
+  padding:13px 0;
+
+  border-bottom:
+    1px solid
+    rgba(190,150,80,.20);
+}
+
+.event-info div:last-child{
+  border:0;
+}
+
+.event-info b{
+  font:
+    600 10px
+    system-ui;
+
+  letter-spacing:.12em;
+
+  color:#9b6f25;
+}
+
+.event-info span{
+  font-size:14px;
+
+  line-height:1.4;
+}
+
+.event-info a{
+  color:#861d32;
+
+  text-decoration:none;
+
+  font-weight:600;
+}
+
+.event-info a:hover{
+  text-decoration:underline;
+}
+
+.detail-message{
+  max-width:350px;
+
+  line-height:1.6;
+
+  font-size:14px;
+}
+
+
+/* =========================================================
+   COUNTDOWN
+   ========================================================= */
+
+.countdown{
+  text-align:center;
+}
+
+.countdown>span{
+  font-size:13px;
+
+  letter-spacing:.28em;
+
+  color:#a97828;
+}
+
+.countdown h2{
+  font-size:clamp(38px,11vw,58px);
+
+  color:#861d32;
+
+  margin:6px 0;
+
+  font-weight:500;
+}
+
+.soft-motif{
+  font-size:32px;
+
+  color:#d26d73;
+
+  margin-bottom:10px;
+}
+
+.count-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:12px;
+
+  width:100%;
+
+  max-width:430px;
+
+  margin:24px 0;
+}
+
+.count-grid div{
+  padding:20px 8px;
+
+  border:1px solid #dfc58e;
+
+  border-radius:10px;
+
+  background:
+    rgba(255,250,238,.58);
+
+  box-shadow:
+    0 4px 12px rgba(100,60,20,.04);
+}
+
+.count-grid strong{
+  display:block;
+
+  font-size:38px;
+
+  color:#861d32;
+
+  font-weight:500;
+}
+
+.count-grid span{
+  font-size:10px;
+
+  letter-spacing:.16em;
+
+  color:#a97828;
+}
+
+
+/* =========================================================
+   FAMILY FOOTER
+   ========================================================= */
+
+.family-footer{
+  text-align:center;
+}
+
+.footer-arch{
+  width:100%;
+
+  max-width:600px;
+
+  padding:20px 0;
+}
+
+.soft-temple{
+  font-size:72px;
+
+  color:#c9a366;
+
+  opacity:.55;
+}
+
+.family-footer h2{
+  font-size:42px;
+
+  color:#861d32;
+
+  margin:8px 0;
+}
+
+.family-footer p{
+  line-height:1.8;
+}
+
+.parent-plaque{
+  max-width:450px;
+
+  margin:24px auto;
+
+  padding:28px 20px;
+
+  border:1px solid #c9a55d;
+
+  border-radius:12px;
+
+  background:
+    rgba(255,250,238,.45);
+
+  box-shadow:
+    0 5px 16px rgba(100,60,20,.05);
+}
+
+.small-label{
+  font-size:18px;
+
+  color:#861d32;
+}
+
+.parent-plaque h3{
+  font-size:24px;
+
+  margin:9px;
+
+  color:#5d7044;
+}
+
+.closing{
+  font-size:16px;
+}
+
+
+/* =========================================================
+   SNEAK PEEK
+   ========================================================= */
+
+.sneak-peek{
+  text-align:center;
+
+  justify-content:flex-start;
+
+  padding-top:80px;
+}
+
+.sneak-peek>span{
+  font-size:13px;
+
+  letter-spacing:.28em;
+
+  color:#a97828;
+}
+
+.sneak-peek h2{
+  font-size:clamp(38px,11vw,58px);
+
+  color:#861d32;
+
+  margin:6px 0;
+
+  font-weight:500;
+}
+
+.peek-grid{
+  width:100%;
+
+  max-width:560px;
+
+  display:grid;
+
+  grid-template-columns:
+    1fr
+    1.1fr;
+
+  gap:12px;
+
+  margin-top:22px;
+}
+
+.peek-photo{
+  position:relative;
+
+  display:block;
+
+  height:220px;
+
+  border-radius:12px;
+
+  overflow:hidden;
+
+  border:1px solid #d6bb82;
+
+  background:#e7d6bb;
+}
+
+.peek-photo.tall{
+  height:330px;
+}
+
+.peek-photo img{
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+}
+
+.peek-photo input{
+  display:none;
+}
+
+.final-blessing{
+  margin-top:26px;
+
+  font-size:20px;
+
+  color:#861d32;
+}
+
+
+/* =========================================================
+   KOLAM VIDEO TRANSITION
+   ========================================================= */
+
+#kolamTransition{
+  position:fixed;
+
+  inset:0;
+
+  z-index:9999;
+
+  display:none;
+
+  align-items:center;
+  justify-content:center;
+
+  background:#f8f0df;
+
+  opacity:1;
+
+  pointer-events:none;
+}
+
+#kolamVideo{
+  width:100%;
+
+  height:100%;
+
+  object-fit:contain;
+
+  display:block;
+}
+
+#kolamTransition.kolam-fade{
+  opacity:0;
+
+  transition:
+    opacity 600ms ease;
+
+  pointer-events:none;
+}
+
+
+/* =========================================================
+   TABLET / DESKTOP
+   ========================================================= */
+
+@media(min-width:700px){
+
+  .section{
+    padding-left:10%;
+    padding-right:10%;
+  }
+
+
+  /* OPENING DECORATIONS */
+
+  .hero-decor-left{
+    width:380px;
+    left:-25px;
+  }
+
+  .hero-decor-right{
+    width:380px;
+    right:-25px;
+  }
+
+  .hero-garland{
+    width:500px;
+    top:-390px;
+}
+
+
+  /* PORTRAITS */
+
+  .portrait-ring{
+    width:330px;
+    height:330px;
+  }
+
+  .person-section{
+    min-height:760px;
+  }
+
+
+  /* EVENTS */
+
+  .event-list{
+    max-width:600px;
+  }
+
+  .event-card{
+    grid-template-columns:
+      100px
+      1fr
+      40px;
+  }
+
+  .event-art{
+    width:100px;
+    height:100px;
+  }
+
+
+  /* COUNTDOWN */
+
+  .count-grid{
+    grid-template-columns:
+      repeat(4,1fr);
+  }
+
+
+  /* SNEAK PEEK */
+
+  .peek-grid{
+    grid-template-columns:
+      repeat(4,1fr);
+  }
+
+  .peek-photo,
+  .peek-photo.tall{
+    height:270px;
+  }
+
+
+  /* EVENT ARTWORK */
+
+  .detail-art{
+    width:250px;
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media(min-width:1100px){
+
+  .hero-decor-left{
+    width:400px;
+    left:0px;
+  }
+
+  .hero-decor-right{
+    width:400px;
+    right:0px;
+  }
+
+  .hero-garland{
+    width:500px;
+    top:-150px;
+  }
+
+  .sita-frame{
+    width:min(60vw,650px);
+  }
+
+  .title-small{
+    font-size:58px;
+  }
+
+  .title-large{
+    font-size:72px;
+  }
+}
+   /* =========================================================
+   MOBILE — ONE INVITATION SECTION PER SCREEN
+   ========================================================= */
+
+@media(max-width:699px){
+
+  html{
+    scroll-snap-type:y mandatory;
+  }
+
+  .section{
+    height:100svh;
+    min-height:100svh;
+
+    scroll-snap-align:start;
+    scroll-snap-stop:always;
+  }
+
+}
+
+/* =========================================================
+   REDUCE MOTION
+   ========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+
+    animation-iteration-count:1 !important;
+
+    transition-duration:.01ms !important;
+  }
+}
+/* =========================================================
+   MOBILE — ONE SCREEN PER SECTION
+   ========================================================= */
+
+@media(max-width:699px){
+
+  .section{
+    height:100svh;
+    min-height:100svh;
+  }
+
+}
