@@ -150,7 +150,7 @@ body{
 .hero-decor-left{
   position:absolute;
 
-  top:5px;
+  top:25px;
   left:-35px;
 
   width:min(31vw,430px);
@@ -173,7 +173,7 @@ body{
 .hero-decor-right{
   position:absolute;
 
-  top:10px;
+  top:20px;
   right:-35px;
 
   width:min(31vw,430px);
