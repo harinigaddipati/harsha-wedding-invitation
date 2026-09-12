@@ -1,6 +1,6 @@
 const weddingData = {
   countdownDate: "2027-02-10T11:00:00",
-  musicFile: ""
+  musicFile: "Sita Kalyanam Male.mp3"
 };
 
 
@@ -87,28 +87,19 @@ if (openInvitation && transition && video) {
 // ==============================
 
 const music = document.getElementById("bgMusic");
-const musicToggle = document.getElementById("musicToggle");
 
-if (music && musicToggle) {
+if (music && weddingData.musicFile) {
+  music.src = weddingData.musicFile;
 
-  musicToggle.onclick = async () => {
+  const startMusic = () => {
+    music.play().catch(() => {
+      console.log("Music could not start yet.");
+    });
 
-    if (!weddingData.musicFile) {
-      alert("Add your licensed music file and set musicFile in script.js.");
-      return;
-    }
-
-    if (music.paused) {
-
-      music.src = weddingData.musicFile;
-      await music.play();
-
-    } else {
-
-      music.pause();
-
-    }
-
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("touchstart", startMusic);
   };
 
+  document.addEventListener("click", startMusic, { once: true });
+  document.addEventListener("touchstart", startMusic, { once: true });
 }
