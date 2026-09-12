@@ -511,7 +511,7 @@ body{
 }
 
 .section-heading span{
-  font-size:13px;
+  font-size:15px;
 
   letter-spacing:.28em;
 
@@ -529,7 +529,7 @@ body{
 }
 
 .section-heading p{
-  font-size:12px;
+  font-size:15px;
 
   letter-spacing:.18em;
 
@@ -622,10 +622,8 @@ body{
 
 .events-overview{
   text-align:center;
-
   justify-content:flex-start;
-
-  padding-top:90px;
+  padding-top:28px;
 }
 
 .event-overview-top span{
@@ -659,14 +657,10 @@ body{
 
 .event-list{
   width:100%;
-
   max-width:520px;
-
   display:grid;
-
-  gap:14px;
-
-  margin-top:22px;
+  gap:10px;
+  margin-top:15px;
 }
 
 .event-card{
