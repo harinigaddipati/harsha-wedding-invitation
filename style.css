@@ -598,15 +598,15 @@ body{
 }
 
 .person-info p{
-  margin:7px auto;
+  margin:5px auto;
 
   max-width:330px;
 }
 
 .bio{
-  font-size:15px;
-
-  line-height:1.6;
+  font-size:14px;
+  line-height:1.45;
+  margin-top:4px;
 }
 
 .mini-lotus{
