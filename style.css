@@ -123,7 +123,7 @@ body{
 .hero-decor-left{
   position:absolute;
 
-  top:55px;
+  top:45px;
   left:-35px;
 
   width:min(31vw,430px);
@@ -146,7 +146,7 @@ body{
 .hero-decor-right{
   position:absolute;
 
-  top:55px;
+  top:45px;
   right:-35px;
 
   width:min(31vw,430px);
@@ -168,11 +168,12 @@ body{
 
 .hero-garland{
   position:absolute;
-  top:-390px;
+  top:-120px;
   left:50%;
   transform:translateX(-50%);
 
-  width:min(45vw,500px);
+  width:100vw;
+  max-width:none;
   height:auto;
 
   display:block;
