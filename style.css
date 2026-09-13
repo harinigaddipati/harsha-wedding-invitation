@@ -1512,9 +1512,9 @@ body.landing-open{
   padding:13px 28px;
 }
 
-.landing-page .open-button span:last-child{
+/*.landing-page .open-button span:last-child{
   display:none;
-}
+}*/
 
 /* =========================================================
    DESKTOP — MOBILE/REEL WIDTH INVITATION
@@ -1701,7 +1701,7 @@ body.landing-open{
 
   .landing-page .hero-garland{
     width:125vw;
-    top:-55px;
+    top:-120px;
   }
 
   .landing-page .ganesha-image{
@@ -1771,7 +1771,7 @@ body.landing-open{
   }
 
   .landing-page .hero-garland{
-    top:-70px;
+    top:-120px;
   }
 
   .landing-page .ganesha-image{
