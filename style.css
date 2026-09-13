@@ -2347,6 +2347,16 @@ body.landing-open{
   overflow:hidden;
 }
 
+@media(min-width:700px){
+
+  #floatingConfetti{
+    width:430px;
+    left:50%;
+    right:auto;
+    transform:translateX(-50%);
+  }
+
+}
 .wedding-petal,
 .wedding-leaf{
   position:absolute;
