@@ -2001,7 +2001,7 @@ body.landing-open{
 
 .landing-page .ganesha-wrap{
   margin-top:0;
-  transform:translateY(-50px);
+  transform:translateY(-35px);
 }
 
 .landing-page .hero-title{
@@ -2149,7 +2149,7 @@ body.landing-open{
 
   .landing-page .hero-decor-left,
   .landing-page .hero-decor-right{
-    width:210px;
+    width:160px;
     top:35px;
   }
 
@@ -2162,7 +2162,7 @@ body.landing-open{
   }
 
   .landing-page .hero-garland{
-    width:340px;
+    width:100%;
     top:0px;
   }
 
