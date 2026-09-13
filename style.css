@@ -167,7 +167,7 @@ body{
 
 .hero-garland{
   position:absolute;
-  top:-180px;
+  top:-120px;
   left:50%;
   transform:translateX(-50%);
 
@@ -183,6 +183,7 @@ body{
 
   z-index:2;
 }
+
 
 
 /* =========================================================
@@ -1205,7 +1206,7 @@ body{
 
   .hero-garland{
     width:500px;
-    top:-390px;
+    top:-300px;
 }
 
 
