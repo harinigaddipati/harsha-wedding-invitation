@@ -686,8 +686,8 @@ body{
   margin:4px 0 12px;
   color:#594333;
   font-family:"Playfair Display",serif;
-  font-size:clamp(30px,8vw,38px);
-  line-height:1.08;
+  font-size:28px;
+  line-height:1.1;
   font-weight:500;
   letter-spacing:.035em;
   text-align:center;
@@ -751,8 +751,8 @@ body{
 .intro-name{
   color:#64152A;
   font-family:"Playfair Display",serif;
-  font-size:30px;
-  line-height:1.15;
+  font-size:36px;
+  line-height:1.12;
   font-weight:600;
   letter-spacing:.035em;
   text-align:center;
@@ -846,19 +846,8 @@ body{
     max-width:390px;
   }
 
-
-  .intro-title{
-    font-size:44px;
-  }
-
-
   .intro-message{
     font-size:15px;
-  }
-
-
-  .intro-name{
-    font-size:27px;
   }
 
 }
@@ -908,11 +897,7 @@ body{
   .intro-blessing{
     font-size:13px;
   }
-  .intro-title{
-  font-size:clamp(28px,7.5vw,36px);
-  }
-
-
+  
   .intro-message{
     font-size:14px;
 
@@ -924,11 +909,6 @@ body{
     font-size:11px;
 
     letter-spacing:.17em;
-  }
-
-
-  .intro-name{
-    font-size:32px;
   }
 
 
@@ -984,8 +964,6 @@ body{
 
 
   .intro-title{
-    font-size:32px;
-
     margin-bottom:7px;
   }
 
@@ -1002,12 +980,6 @@ body{
 
     line-height:1.5;
   }
-
-
-  .intro-name{
-    font-size:21px;
-  }
-
 
   .intro-and{
     font-size:17px;
