@@ -909,7 +909,7 @@ body{
     font-size:13px;
   }
   .intro-title{
-  font-size:clamp(30px,8vw,38px);
+  font-size:clamp(28px,7.5vw,36px);
   }
 
 
@@ -928,7 +928,7 @@ body{
 
 
   .intro-name{
-    font-size:28px;
+    font-size:32px;
   }
 
 
