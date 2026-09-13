@@ -3,107 +3,191 @@ const weddingData = {
   musicFile: "Seetha Kalyanam Female.mp3"
 };
 
-// ==============================
+
+// =========================================================
 // COUNTDOWN
-// ==============================
+// =========================================================
 
 function tick() {
-  const diff = new Date(weddingData.countdownDate) - new Date();
+
+  const diff =
+    new Date(weddingData.countdownDate) - new Date();
 
   const vals = [0, 0, 0, 0];
 
   if (diff > 0) {
-    vals[0] = Math.floor(diff / 86400000);
-    vals[1] = Math.floor(diff / 3600000) % 24;
-    vals[2] = Math.floor(diff / 60000) % 60;
-    vals[3] = Math.floor(diff / 1000) % 60;
+
+    vals[0] =
+      Math.floor(diff / 86400000);
+
+    vals[1] =
+      Math.floor(diff / 3600000) % 24;
+
+    vals[2] =
+      Math.floor(diff / 60000) % 60;
+
+    vals[3] =
+      Math.floor(diff / 1000) % 60;
   }
 
-  ["days", "hours", "minutes", "seconds"].forEach((id, i) => {
-    const element = document.getElementById(id);
 
-    if (element) {
-      element.textContent = String(vals[i]).padStart(2, "0");
+  ["days", "hours", "minutes", "seconds"].forEach(
+    (id, i) => {
+
+      const element =
+        document.getElementById(id);
+
+      if (element) {
+
+        element.textContent =
+          String(vals[i]).padStart(2, "0");
+
+      }
+
     }
-  });
+  );
+
 }
 
+
 tick();
+
 setInterval(tick, 1000);
 
 
-// ==============================
-// OPEN INVITATION
-// ==============================
-// Opening → Kolam video → Bride
+// =========================================================
+// LANDING PAGE
+// =========================================================
 
-const openInvitation = document.getElementById("openInvitation");
-const transition = document.getElementById("kolamTransition");
-const video = document.getElementById("kolamVideo");
+const landingPage =
+  document.getElementById("landingPage");
 
-if (openInvitation && transition && video) {
+const openInvitation =
+  document.getElementById("openInvitation");
 
-  openInvitation.addEventListener("click", () => {
+const bride =
+  document.getElementById("bride");
 
-    transition.style.display = "flex";
-    transition.classList.remove("kolam-fade");
 
-    video.currentTime = 0;
+// =========================================================
+// BACKGROUND MUSIC
+// =========================================================
 
-    video.play().catch(() => {
-      console.log("Kolam video could not autoplay.");
-    });
+const music =
+  document.getElementById("bgMusic");
 
-    video.onended = () => {
 
-      transition.classList.add("kolam-fade");
+// Prepare the audio.
+// IMPORTANT:
+// We do NOT call play() here.
+// Android browsers generally block autoplay
+// until the user interacts with the page.
 
-      setTimeout(() => {
+if (music && weddingData.musicFile) {
 
-        const bride = document.getElementById("bride");
+  music.src = weddingData.musicFile;
 
-        if (bride) {
+  music.loop = true;
+
+  music.volume = 0.5;
+
+}
+
+
+// =========================================================
+// OPEN INVITATION CLICK
+// =========================================================
+
+if (openInvitation) {
+
+  openInvitation.addEventListener(
+    "click",
+    async function () {
+
+
+      // -----------------------------------------------------
+      // 1. START MUSIC FROM THE USER'S BUTTON CLICK
+      // -----------------------------------------------------
+
+      if (music) {
+
+        try {
+
+          await music.play();
+
+          console.log("Wedding music started.");
+
+        } catch (error) {
+
+          console.log(
+            "Music could not start:",
+            error
+          );
+
+        }
+
+      }
+
+
+      // -----------------------------------------------------
+      // 2. FADE OUT THE LANDING PAGE
+      // -----------------------------------------------------
+
+      if (landingPage) {
+
+        landingPage.classList.add(
+          "landing-hidden"
+        );
+
+      }
+
+
+      // -----------------------------------------------------
+      // 3. UNLOCK PAGE SCROLLING
+      // -----------------------------------------------------
+
+      document.body.classList.remove(
+        "landing-open"
+      );
+
+
+      // -----------------------------------------------------
+      // 4. MOVE TO BRIDE SECTION
+      // -----------------------------------------------------
+
+      if (bride) {
+
+        setTimeout(function () {
+
           bride.scrollIntoView({
             behavior: "smooth",
             block: "start"
           });
-        }
 
-        transition.style.display = "none";
-        transition.classList.remove("kolam-fade");
+        }, 350);
 
-      }, 600);
+      }
 
-    };
-
-  });
-
-}
-
-
-// ==============================
-// MUSIC
-// ==============================
-const music = document.getElementById("bgMusic");
-
-if (music && weddingData.musicFile) {
-  music.src = weddingData.musicFile;
-  music.volume = 0.5;
-
-  const startMusic = async () => {
-    try {
-      await music.play();
-      console.log("Music started.");
-    } catch (error) {
-      console.log("Music could not start:", error);
     }
+  );
 
-    document.removeEventListener("touchend", startMusic);
-    document.removeEventListener("click", startMusic);
-    document.removeEventListener("pointerup", startMusic);
-  };
-
-  document.addEventListener("touchend", startMusic, { once: true });
-  document.addEventListener("click", startMusic, { once: true });
-  document.addEventListener("pointerup", startMusic, { once: true });
 }
+
+
+// =========================================================
+// IMPORTANT
+// =========================================================
+//
+// There is intentionally NO:
+//
+// - Kolam video
+// - music fade
+// - music pause
+// - touchend music listener
+// - document-wide click music listener
+// - pointerup music listener
+//
+// Music starts once from OPEN INVITATION and keeps playing
+// continuously while the invitation is being scrolled.
+//
+// =========================================================
