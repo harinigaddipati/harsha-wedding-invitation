@@ -84,21 +84,26 @@ if (openInvitation && transition && video) {
 // ==============================
 // MUSIC
 // ==============================
-
 const music = document.getElementById("bgMusic");
 
 if (music && weddingData.musicFile) {
   music.src = weddingData.musicFile;
+  music.volume = 0.5;
 
-  const startMusic = () => {
-    music.play().catch(() => {
-      console.log("Music could not start yet.");
-    });
+  const startMusic = async () => {
+    try {
+      await music.play();
+      console.log("Music started.");
+    } catch (error) {
+      console.log("Music could not start:", error);
+    }
 
+    document.removeEventListener("touchend", startMusic);
     document.removeEventListener("click", startMusic);
-    document.removeEventListener("touchstart", startMusic);
+    document.removeEventListener("pointerup", startMusic);
   };
 
+  document.addEventListener("touchend", startMusic, { once: true });
   document.addEventListener("click", startMusic, { once: true });
-  document.addEventListener("touchstart", startMusic, { once: true });
+  document.addEventListener("pointerup", startMusic, { once: true });
 }
