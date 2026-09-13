@@ -65,8 +65,8 @@ const landingPage =
 const openInvitation =
   document.getElementById("openInvitation");
 
-const bride =
-  document.getElementById("bride");
+const intro =
+  document.getElementById("intro");
 
 
 // =========================================================
@@ -151,22 +151,22 @@ if (openInvitation) {
       );
 
 
-      // -----------------------------------------------------
-      // 4. MOVE TO BRIDE SECTION
-      // -----------------------------------------------------
-
-      if (bride) {
-
-        setTimeout(function () {
-
-          bride.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-
-        }, 350);
-
-      }
+        // -----------------------------------------------------
+        // 4. MOVE TO INTRO SECTION
+        // -----------------------------------------------------
+        
+        if (intro) {
+        
+          setTimeout(function () {
+        
+            intro.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+        
+          }, 350);
+        
+        }
 
     }
   );
