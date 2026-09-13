@@ -2000,7 +2000,8 @@ body.landing-open{
 }
 
 .landing-page .ganesha-wrap{
-  margin-top:-25px;
+  margin-top:0;
+  transform:translateY(-30px);
 }
 
 .landing-page .hero-title{
