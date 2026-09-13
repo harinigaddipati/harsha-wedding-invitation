@@ -1436,10 +1436,14 @@ body.landing-open{
 
 .landing-page{
   position:fixed;
-  inset:0;
-  z-index:9999;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:99999;
   width:100%;
   height:100svh;
+  min-height:100vh;
   overflow:hidden;
   display:flex;
   flex-direction:column;
@@ -1649,7 +1653,7 @@ body.landing-open{
 
   .landing-page .hero-garland{
     width:430px;
-    top:-45px;
+    top:-180px;
   }
 
   .landing-page .ganesha-image{
@@ -1702,7 +1706,7 @@ body.landing-open{
 
   .landing-page .hero-garland{
   width:125vw;
-  top:-55px;
+  top:-180px;
   }
 
   .landing-page .ganesha-image{
@@ -1772,7 +1776,7 @@ body.landing-open{
   }
 
   .landing-page .hero-garland{
-    top:-55px;
+    top:-180px;
   }
 
   .landing-page .ganesha-image{
