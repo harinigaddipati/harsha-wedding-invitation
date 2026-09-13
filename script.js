@@ -67,7 +67,113 @@ const openInvitation =
 
 const intro =
   document.getElementById("intro");
+const floatingConfetti =
+  document.getElementById("floatingConfetti");
 
+let confettiStarted = false;
+
+function createWeddingPetal(){
+
+  if (!floatingConfetti) return;
+
+  const particle =
+    document.createElement("div");
+
+  const isLeaf =
+    Math.random() > 0.55;
+
+  particle.className =
+    isLeaf
+      ? "wedding-leaf"
+      : "wedding-petal";
+
+  /*
+     Keep most particles near the sides
+     so the invitation text stays easy to read.
+  */
+
+  const side =
+    Math.random() > 0.5
+      ? "left"
+      : "right";
+
+  if (side === "left"){
+
+    particle.style.left =
+      (Math.random() * 25) + "%";
+
+  } else {
+
+    particle.style.left =
+      (75 + Math.random() * 25) + "%";
+
+  }
+
+  const duration =
+    7 + Math.random() * 5;
+
+  const delay =
+    Math.random() * 0.4;
+
+  particle.style.animationDuration =
+    duration + "s";
+
+  particle.style.animationDelay =
+    delay + "s";
+
+  /*
+     Slight size variation
+  */
+
+  const scale =
+    0.65 + Math.random() * 0.7;
+
+  particle.style.transform =
+    "scale(" + scale + ")";
+
+  floatingConfetti.appendChild(particle);
+
+  setTimeout(function(){
+
+    particle.remove();
+
+  }, (duration + delay) * 1000 + 500);
+
+}
+
+
+function startWeddingConfetti(){
+
+  if (confettiStarted) return;
+
+  confettiStarted = true;
+
+  /*
+     Start with only a few particles.
+  */
+
+  for(let i = 0; i < 4; i++){
+
+    setTimeout(function(){
+
+      createWeddingPetal();
+
+    }, i * 450);
+
+  }
+
+  /*
+     Keep gently adding particles
+     while the invitation is open.
+  */
+
+  setInterval(function(){
+
+    createWeddingPetal();
+
+  }, 1800);
+
+}
 
 // =========================================================
 // BACKGROUND MUSIC
@@ -130,7 +236,14 @@ if (openInvitation) {
 
 
       // -----------------------------------------------------
-      // 2. FADE OUT THE LANDING PAGE
+      // 2. START FLOATING WEDDING PETALS
+      // -----------------------------------------------------
+
+      startWeddingConfetti();
+
+
+      // -----------------------------------------------------
+      // 3. FADE OUT THE LANDING PAGE
       // -----------------------------------------------------
 
       if (landingPage) {
@@ -143,7 +256,7 @@ if (openInvitation) {
 
 
       // -----------------------------------------------------
-      // 3. UNLOCK PAGE SCROLLING
+      // 4. UNLOCK PAGE SCROLLING
       // -----------------------------------------------------
 
       document.body.classList.remove(
@@ -151,28 +264,27 @@ if (openInvitation) {
       );
 
 
-        // -----------------------------------------------------
-        // 4. MOVE TO INTRO SECTION
-        // -----------------------------------------------------
-        
-        if (intro) {
-        
-          setTimeout(function () {
-        
-            intro.scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-        
-          }, 350);
-        
-        }
+      // -----------------------------------------------------
+      // 5. MOVE TO INTRO SECTION
+      // -----------------------------------------------------
+
+      if (intro) {
+
+        setTimeout(function () {
+
+          intro.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+        }, 350);
+
+      }
 
     }
   );
 
 }
-
 
 // =========================================================
 // IMPORTANT
