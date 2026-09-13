@@ -708,7 +708,7 @@ body{
 
 .intro-title{
   margin:4px 0 12px;
-  color:#64152A;
+  color:#594333;
   font-family:"Playfair Display",serif;
   font-size:clamp(30px,8vw,38px);
   line-height:1.08;
@@ -719,7 +719,7 @@ body{
 
 .intro-title span{
   display:block;
-  color:#64152A;
+  color:#594333;
   font-family:"Playfair Display",serif;
   margin-top:2px;
 }
@@ -748,19 +748,12 @@ body{
 
 .intro-family{
   margin:8px 0 10px;
-
-  color:#9A6A1F;
-
+  color:#594333;
   font-family:"Playfair Display",serif;
-
   font-size:12px;
-
   line-height:1.7;
-
   letter-spacing:.20em;
-
   font-weight:500;
-
   text-align:center;
 }
 
@@ -771,15 +764,10 @@ body{
 
 .intro-couple{
   display:flex;
-
   flex-direction:column;
-
   align-items:center;
-
   justify-content:center;
-
   text-align:center;
-
   margin-top:3px;
 }
 
@@ -810,19 +798,12 @@ body{
 
 .intro-cordially{
   margin:8px 0 7px;
-
   color:#594333;
-
   font-family:"Playfair Display",serif;
-
   font-size:13px;
-
   line-height:1.5;
-
   font-style:italic;
-
   font-weight:400;
-
   text-align:center;
 }
 
@@ -835,7 +816,7 @@ body{
   margin-top:8px;
   padding-top:8px;
   border-top:1px solid rgba(154,106,31,.55);
-  color:#9A6A1F;
+  color:#64152A;
   font-family:"Playfair Display",serif;
   font-size:19px;
   line-height:1.3;
