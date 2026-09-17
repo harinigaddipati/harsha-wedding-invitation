@@ -344,15 +344,10 @@ body{
 .sita-frame{
   position:relative;
   z-index:3;
-
   width:min(92vw,600px);
-
   margin:4px auto 8px;
-
   min-height:320px;
-
   display:flex;
-
   align-items:center;
   justify-content:center;
 }
@@ -2011,7 +2006,7 @@ body.landing-open{
 .landing-page .sita-frame{
   width:min(72vw,430px);
   min-height:0;
-  margin:10px auto 12px;
+  margin:22px auto 4px;
   flex:0 1 auto;
 }
 
